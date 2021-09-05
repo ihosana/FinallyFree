@@ -1,0 +1,33 @@
+﻿@model Usuario
+@{
+  ViewData["Title"] = "Login";
+}
+
+<div class="imgam">
+  <div id="titulo">
+
+    <h1>Login</h1>
+
+    <link rel="stylesheet" href="~/css/log.css" />
+    <p id="mensagem">@ViewBag.Mensagem </p>
+    <form method="POST">
+      <p>
+        <input asp-for="login" placeholder="Login" />
+      </p>
+      <p>
+        <input type="password" asp-for="senha" placeholder="senha" />
+      </p>
+
+      <p><input type="submit" value="Entrar"></p>
+
+    </form>
+    <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Cadastro"><input type="submit" value="Cadastre-se!"></a>
+
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>

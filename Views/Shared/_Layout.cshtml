@@ -1,0 +1,77 @@
+﻿@using Microsoft.AspNetCore.Http
+<!doctyper html>
+    <html lang="pt-br">
+
+    <meta charset="utf-8">
+
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - Trabalho._2</title>
+
+        <link rel="stylesheet" href="~/css/site.css" />
+
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class="menu">
+                    <ul>
+                        <b>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                    asp-action="Index">FinallyFree</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                    asp-action="Index">Vetrine</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuario"
+                                    asp-action="Login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Viagem"
+                                    asp-action="ListaPacote">Lista de pacotes</a>
+                            </li>
+                            <!--
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuario"
+                                    asp-action="Login">Login</a>
+                            </li>
+                            -->
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">
+                                    <p><img src="/img/carrinho.png" width="60px" height="35px"></p>
+                                </a>
+                            </li>
+                        </b>
+                    </ul>
+                    @if (Context.Session.GetInt32("IDUsuario") != null)
+                    {
+                        <span id="span">Olá @Context.Session.GetString("loginUsuario")<a asp-action="Logout">Sair</a></span>
+                    }
+
+                </div>
+
+            </nav>
+        </header>
+
+
+        <main role="main">
+            @RenderBody()
+        </main>
+
+        <!--
+        <footer class="roda">
+            &copy; 2019 - Cadastros
+        </footer>-->
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @RenderSection("Scripts", required: false)
+    </body>
+
+    </html>

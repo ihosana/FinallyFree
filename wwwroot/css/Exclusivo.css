@@ -1,0 +1,28 @@
+#paragrafo{
+    color: white;
+    font-size: 50px;
+    font-style: normal;
+    text-align: center;
+    margin-top: 60px;
+}
+
+  
+#quem{
+    background-image: url("/img/item-9.jpg");
+    width: auto;
+}
+#somos{
+    
+  font-size: 90px;
+  font-family: cursive;
+    color: yellow;
+    text-align: center;
+}
+#quadro{
+    border: 1px solid black;
+    padding: 25px 50px 75px 100px;
+    background-color: white;
+    width: auto;
+    
+    
+}

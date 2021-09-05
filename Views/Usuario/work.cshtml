@@ -1,0 +1,39 @@
+@model Usuario
+
+        @{
+            ViewData["Title"] = "Cadastro";
+        }
+<div id="img">
+    <div id="titulo">        
+        <link rel="stylesheet" href="~/css/log.css" />
+        <h1>Cadastro</h1>
+        <form asp-action="Cadastro" method="POST">
+            <p>
+                <input asp-for="nome" placeholder="nome " />
+            </p>
+            <p>
+                <input asp-for="login" placeholder="login"/>
+            </p>
+            <p>
+                <input type="password" asp-for="senha" placeholder="Senha" />
+            </p>
+            <p>
+                <input asp-for="tipo" placeholder="Tipo 0 Administrador e 1 Colaborador" />
+            </p>
+            <!--
+              <select name="tipo">
+              <option value="0"> Administrador</option>
+               <option value="0"> Colaborador</option>
+
+              </select>
+             --> 
+            <p>
+                <input type="date" asp-for="data" placeholder="data" />
+            </p>
+
+            <p><input type="submit" value="Cadastrar"></p>
+
+        </form>
+        <p id="dito">@ViewBag.Mensagem</p>
+    </div>
+</div>

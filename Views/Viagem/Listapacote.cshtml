@@ -1,0 +1,65 @@
+@model IEnumerable<Viagem>
+
+@{
+    ViewData["Title"] = "Listagem de cadastro de Pacotes";
+}
+<!doctyper html>
+    <html lang="pt-br">
+
+    <meta charset="utf-8">
+
+    <head>
+        <p>@ViewBag.Mensagem </p>
+        <link rel="stylesheet" href="~/css/lista.css" />
+    </head>
+    <body id="branca">
+         </br>   
+        <h2 id="usuario" >Listagem de Pacotes</h2>
+        </br>
+        </br>
+        </br>
+     
+        <table id="lista" border="1">
+
+            <thead>
+
+                <tr>
+                    <th id="title">IDPacote</th>
+                    <th id="title">IDusuario</th>
+                    <th id="title">Nome</th>
+                    <th id="title">Origem</th>
+                    <th id="title">Destino</th>
+                    <th id="title">Atrativos</th>
+                    <th id="title">Saida</th>
+                    <th id="title">Retorno</th>
+                    <th id="title">Operações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Viagem c in Model)
+            {
+                    <tr>
+                        <td>@c.IDProduto</td>
+                        <td>@c.IDusuario</td>
+                        <td>@c.nomePacote</td>
+                        <td>@c.origemPacote</td>
+                        <td>@c.destinoPacote</td>
+                        <td>@c.atrativosPacote</td>
+                        <td>@c.saidaPacote</td>
+                        <td>@c.retornoPacote</td>
+                          <td>
+                                  
+                                    <a href="/Viagem/Excluir?IDProduto=@c.IDProduto"><input type="submit" value="Excluir"></a>
+
+                                </td>
+                    </tr>
+            }
+            </tbody>
+
+        </table>
+
+        <p id="novousuario"> <a class="nav-link text-dark" asp-area="" asp-controller="Viagem" asp-action="CadastroPacotes"><input type="submit" value="Cadastrar pacote"></a></a>
+        </p>
+    </body>
+
+</html>

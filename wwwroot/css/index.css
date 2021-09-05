@@ -1,0 +1,120 @@
+/*
+.gallery .control-button {
+  color: aqua;
+  color: aqua;
+}
+
+.gallery .control-button:hover {
+  color: aqua;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+.gallery {
+  position: fixed;
+  background-image: url("/img/item-3.jpg");
+}
+.gallery .item {
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+  background: black;
+}
+.gallery .controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.gallery .control-button {
+  display: inline-block;
+  margin: 0 .02em;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: none;
+  transition: color .1s;
+}
+
+div.polaroid {
+  width: 20%;
+  background-color: white;
+  /*
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+*/
+/*
+input{
+     
+  margin-top: 0%;
+  width:400px ;
+  height: 40px;
+  margin: 15px;
+  border-radius: 30px;
+}
+
+.pagina{
+  text-align: center;
+  width: 420px;
+  margin: 200px auto 0px auto;
+  color: white;
+  text-align: center;
+  font-family: arial;
+}
+*/
+#solucao{
+  margin-top: 0px;
+  margin: 0px;
+  background-image: url("/img/item-3.jpg");
+  width: auto;
+  height:100% ;
+ /* margin: 0px auto 0px auto;*/
+}
+
+
+
+#pagina{
+  text-align: center;
+  width: 600px;
+  margin: 100px auto 0px auto;
+  color: white;
+  font-family: arial; 
+}
+
+#palavra{
+  
+  font-size: 90px;
+  font-family: cursive;
+ 
+}
+
+.itens{
+  padding: 1em 3px 30px 10px;
+   width: 400px;
+   background-color: white;
+   display: inline-block;
+}
+
+.partebranca{
+  text-align: center;
+  padding: 9px 10px;
+ 
+}
+#atencao{
+  
+  padding: 1em 3px 30px 40px;
+}
+#prag{
+  color: black;
+  font-size: 50px;
+  font-style: normal;
+  text-align: center;
+  
+}

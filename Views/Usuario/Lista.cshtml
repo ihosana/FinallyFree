@@ -1,0 +1,66 @@
+@model IEnumerable<Usuario>
+@{
+    ViewData["Title"] = "Listagem de Usuário";
+}
+<!doctyper html>
+    <html lang="pt-br">
+
+    <meta charset="utf-8">
+
+    <head>
+
+        <p id="mensagem">@ViewBag.Mensagem </p>
+        <link rel="stylesheet" href="~/css/lista.css" />
+    </head>
+   
+ <body id="corpo">
+
+        </br>
+        </br>
+        <h2 id="usuario">Listagem de Usuários</h2>
+        <br>
+
+
+        <table id="lista" border="1">
+            <thead>
+                <tr><b>
+                        <th class="cor">Id</th>
+                        <th id="title">Nome</th>
+                        <th id="title">login</th>
+                        <th id="title">Senha</th>
+                        <th id="title">Editar/excluir</th>
+                    </b>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Usuario u in Model)
+                {
+                    <tr>
+                        <b>
+                            <td class="cor">@u.id</td>
+                            <td>@u.nome</td>
+                            <td>@u.login</td>
+                            <td>@u.senha</td>
+                            <td>
+                                <a href="/Usuario/Editar?id=@u.id"><input type="submit" value="Editar"></a>
+                                <a href="/Usuario/Excluir?id=@u.id"><input type="submit" value="Excluir"></a>
+
+                            </td>
+                        </b>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br>
+        <br>
+       <!--
+          <p id="colorbutton" >
+          <a  asp-area="" asp-controller="Usuario" asp-action="Editar"></a><input type="submit" value="Editar"></a>
+          <a asp-area="" asp-controller="Usuario" asp-action="Excluir"><input type="submit" value="Excluir"></a>
+                        </p>  
+         -->
+ </body> <p id="novousuario"> 
+        <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="work"><input type="submit"
+         value="Novo usuario"></a>
+            </p>
+</html>

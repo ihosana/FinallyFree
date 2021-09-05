@@ -1,0 +1,43 @@
+@model Viagem
+@{
+    ViewData["Title"] = "CadastroPacotes";
+
+}
+
+<div id="img">
+
+    <div id="titulo">
+        <link rel="stylesheet" href="~/css/log.css" />
+
+        <h1>Cadastre um pacote de viagem</h1>
+
+        <p id="dito">@ViewBag.Mensagem</p>
+
+        <form method="POST" asp-action="CadastroPacotes">
+            <p>
+                <input asp-for="nomePacote" placeholder="nome" />
+            </p>
+            <p>
+                <input asp-for="origemPacote" placeholder="Origem do Pacote" />
+            </p>
+            <p>
+                <input asp-for="destinoPacote" placeholder="Destino" />
+            </p>
+            <p>
+                <input asp-for="atrativosPacote" placeholder="Atrativos" />
+            </p>
+            <p>
+                <input type="date" asp-for="saidaPacote" placeholder="Saída" />
+            </p>
+            <p>
+                <input type="date" asp-for="retornoPacote" placeholder="Retorno" />
+            </p>
+        
+         
+            <p><input type="submit" value="Cadastrar pedidos"></p>
+
+        </form>
+
+    </div>
+
+</div>
